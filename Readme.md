@@ -60,7 +60,7 @@
 * Requirements Quality Assurance
 * Requirements Management
   
-2. Software Design  
+2. System Design  
 
 
 
