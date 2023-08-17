@@ -51,7 +51,7 @@
 
 # Course Topics Overview
 1. Requirement Engineering (RE) in Software Engineering and Management
-* Fundamentals in Requirements Engineering
+* [Fundamentals in Requirements Engineering](https://ugedugh-my.sharepoint.com/:b:/g/personal/poffei_st_ug_edu_gh/EYRHbNl-BUhBlWl9nqOK-SsBtNhdWVgxxs6Hyxuo7mqWVw?e=LIkdWv)
 * RE Core Activities and Principles
 * RE Approaches Overview
 * Requirements Elicitation
@@ -64,7 +64,8 @@
 
 
 
-
+# Test Book
+[System Design by Alex Xu](https://ugedugh-my.sharepoint.com/:b:/g/personal/poffei_st_ug_edu_gh/ETS4c2NQ_bBAo0dLhx7GVlEB2bLwZ46oxDAJ_fAbQC5CxQ?e=X5dVw1)
 
 
 ## After the course a student hopefully will know:
