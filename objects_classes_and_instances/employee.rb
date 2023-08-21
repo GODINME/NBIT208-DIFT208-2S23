@@ -1,4 +1,6 @@
-class Employee 
+class Employee
+    attr_reader :id, :name, :age, :retirement_age
+    
     def initialize(id, name, age)
         @id = id 
         @name = name 
@@ -6,19 +8,4 @@ class Employee
         @retirement_age = 70 
     end
 
-    def id 
-        @id
-    end
-
-    def name 
-        @name 
-    end
-
-    def age
-        @age 
-    end
-
-    def retire_age 
-        @retirement_age
-    end
 end
