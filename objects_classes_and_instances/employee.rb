@@ -3,5 +3,6 @@ class Employee
         @id = id 
         @name = name 
         @age = age
+        @retirement_age = 70 
     end
 end
