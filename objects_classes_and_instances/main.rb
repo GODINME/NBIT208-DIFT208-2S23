@@ -5,3 +5,5 @@ patrick = Employee.new(2, "Patrick", 26)
 eric = Employee.new(3, "Eric", 45)
 
 require 'pry'; binding.pry
+
+paul.id
