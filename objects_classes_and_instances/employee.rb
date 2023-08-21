@@ -1,5 +1,7 @@
 class Employee 
-    def def initialize
-        puts "An Employee class implementation"
+    def def initialize(id, name, age)
+        @id = id 
+        @name = name 
+        @age = age
     end
 end
