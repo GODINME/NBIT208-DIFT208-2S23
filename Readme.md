@@ -52,7 +52,7 @@
 # Course Topics Overview
 1. Requirement Engineering (RE) in Software Engineering and Management
 * [Fundamentals in Requirements Engineering](https://ugedugh-my.sharepoint.com/:b:/g/personal/poffei_st_ug_edu_gh/EYRHbNl-BUhBlWl9nqOK-SsBtNhdWVgxxs6Hyxuo7mqWVw?e=LIkdWv)
-* RE Core Activities and Principles
+* [RE Core Activities and Principles](https://ugedugh-my.sharepoint.com/:b:/g/personal/poffei_st_ug_edu_gh/Eclh9aj24AtAj-Lg-PEZpKQB_LLgY4XLsuWv7BHJYcLM0w?e=ixI3LK)
 * RE Approaches Overview
 * Requirements Elicitation
 * Functional Requirements
@@ -60,30 +60,13 @@
 * Requirements Quality Assurance
 * Requirements Management
   
-2. System Design  
-
+2. System Design (Focusing on Scalable Software Architectures)
+* [Types of Scaling](https://ugedugh-my.sharepoint.com/:p:/g/personal/poffei_st_ug_edu_gh/EUrOvngCvQ1BrXaQydf7crsBr3OdRcH6eo1RUGxvgpQ4eg?e=LrwoCi)
+* [HTTP and Web Servers](https://ugedugh-my.sharepoint.com/:p:/g/personal/poffei_st_ug_edu_gh/EUl2znN_5sxHneazGaLM9zIBhM8sP0aegx8lwvUQNVPnXg?e=aVlUqo)
 
 
 # Test Book
-[System Design by Alex Xu](https://ugedugh-my.sharepoint.com/:b:/g/personal/poffei_st_ug_edu_gh/ETS4c2NQ_bBAo0dLhx7GVlEB2bLwZ46oxDAJ_fAbQC5CxQ?e=X5dVw1)
+* [System Design by Alex Xu](https://ugedugh-my.sharepoint.com/:b:/g/personal/poffei_st_ug_edu_gh/ETS4c2NQ_bBAo0dLhx7GVlEB2bLwZ46oxDAJ_fAbQC5CxQ?e=X5dVw1)
+* [Modern Systems Analysis and Design by Joseph Valacich, Joey George](https://ugedugh-my.sharepoint.com/:b:/g/personal/poffei_st_ug_edu_gh/Eehpvfl6SUtPiEWWJcj5Ma0BA59qmvEyYGvgXA2GfjD_iQ?e=wlD5OU)
+* [Engineering Software as a Service by Armando Fox, David Patterson](https://ugedugh-my.sharepoint.com/:b:/g/personal/poffei_st_ug_edu_gh/EW83sbNFNAhKoP5zvwFpHPIBblKweLVOMSMguf6RPJ86JA?e=GTuO55)
 
-
-## After the course a student hopefully will know:
-* How to manage software requirements
-* How to develop iteratively and incrementally
-* How to think with objects, not procedures
-* How to use design patterns and not use anti-patterns
-* How to draw and share knowledge using UML
-* How to choose and use data formats, e.g. XML or JSON
-* How to choose a database management server
-* How to deploy software continuously
-* How to build distributed software systems
-* How to test software
-* How to measure the quality of software design
-
-# They will also be able to:
-* Document requirements in SRS and use cases
-* Make key design decisions
-* Explain them in UML
-* Use and Organize repository in GitHub and Git
-* Automate the build and cover it with tests
