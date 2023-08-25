@@ -20,7 +20,7 @@ sidebar_position: 1
 * System Analysis and System Design are two stages of the software development life cycle. System Analysis is a process of collecting and analyzing the requirements of the system whereas System Design is a process of creating a design for the system to meet the requirements. Both are important stages as it helps to create an effective system with all the features and functions.
 
 # Course Topics Overview
-1. Requirement Engineering or System Analysis in Software Engineering and Management
+1.System Analysis in Software Engineering and Management
 * Fundamentals in Requirements Engineering
 * RE Core Activities and Principles
 * RE Approaches Overview
@@ -30,7 +30,26 @@ sidebar_position: 1
 * Requirements Quality Assurance
 * Requirements Management
   
-2. System Design  
+2. System Design in the context of Scalable Software architectures
+* Types of Scaling
+* HTTP and Web Services
+* Stateless Services
+* Proxies and Caches
+* REST APIs and Data Serialization
+* Load Balancing
+* Microservices
+* Relational Databases
+* SQL Database Scaling
+* Authentication
+* Basic Architecture Design
+* Push Notifications
+* Distributed NoSQL Databases
+* Distributed Database Consistency
+* Choosing a Database
+* Asynchronous Processing
+* Twitter(now X) Design
+* Computing Platform
+* Distributed Computing 
 
 
 ## Prerequisites

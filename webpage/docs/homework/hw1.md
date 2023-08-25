@@ -1,0 +1,2 @@
+# Homework One
+## From the Case Study Analysis on `Scaling From Zero To Millions of Users`. Using [draw io](https://app.diagrams.net/) design your own system of choice that is able to scale to serve millions of customers and explain the business logic behind your system 

@@ -20,6 +20,8 @@ tags: [facebook, hello, docusaurus]
 * [Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 * [Sign Up on Github](https://github.com)
 * [Text Editor but for web engineering we love vscode](https://code.visualstudio.com/)
+* [Ruby documentation to explore more](https://www.ruby-lang.org/en/documentation/)
+* [Rspec Testing Framework Documentation to explore more](https://rspec.info/documentation/)
 
 
 
@@ -408,3 +410,539 @@ If you have time:
 * Pretty print: add a method that prints a table of books and authors that the library has. `This will require some string manipulation to get a table to print with columns that line up`.
 
 * Update your `run_book` file to create a new library, add some books to the library, and print information about their collections.
+
+
+
+## 2. Intro to Testing
+
+### Learning Goals
+* Understand why we use tests
+* Define the stages of a test
+* Define a RSpec test
+* Use a variety of assertion methods
+
+### Vocabulary
+* Gem
+* Test
+* Assertion
+
+### Warm Up
+
+* Think back of your practical solution in (1); how did you know if your program was working?
+* What are some potential drawbacks to this approach?
+
+### Test Etiquette
+### File Structure
+* Spec files live in their own `spec directory`
+* Implementation code files live in a sibling `lib directory`
+* Spec files should reflect the class they’re testing with `_spec` appended to the file name, e.g. `spec/name_of_class_spec.rb`
+* In your test, you’ll now require `./lib/name_of_class.rb`
+* Run your spec files from the `root of the project directory`, e.g. `rspec spec`
+* If you want to run a specfic spec file you can append the location of that file to the `rspec spec` command. So `rspec spec spec/name_of_file_spec.rb`
+
+```bash
+.
+├── lib
+|   └── name_of_class.rb
+└── spec
+    └── name_of_class_spec.rb
+```
+
+### RSpec Setup
+* RSpec is a framework used for automated testing. It helps us to do `Test Driven Development TDD`
+
+```bash
+gem install rspec
+```
+* Require rspec - the easy and explicit way to run all your tests
+
+### RSpec Convention
+* At the top of every spec file: `describe NameOfClass`
+* describe `‘#name_of_method’`
+    *  It is good practice to have another describe block for the name of method. That way we can group all assertions dealing with this method in this describe block.
+* We need to have an assertion at the end of every test
+    * A lot of times we are going to compare if two values are equal to each other
+    * We do that by writing `expect(actual).to eq(expected)` where actual is the result of the method call or object querying, and expected is the value we expect it to be.
+* [RSpec Expectations Documentation](https://www.rubydoc.info/github/rspec/rspec-expectations/RSpec/Expectations)
+
+### S.E.A.T
+Each test that we create needs 4 components to be a properly built test.
+
+* Setup - The setup of a test is all of the lines of code that need to be executed in order to verify some behavior. Because each test is run individually, we often see the same setup being created multiple times.
+* Execution - The execution is the actual running of the method we are testing. This sometimes happens on the same line as the assertion, and sometimes happens prior to the assertion.
+* Assertion - The verification of the behavior we are expecting. This is really the main focus of the test; without the assertion, we have no test.
+* Teardown - After we complete a test, we want to delete all of our setup, and clear the scope for our next test. In RSpec this is done automatically!
+
+```bash
+cd objects_classes_and_instances
+mkdir testing
+cd testing
+mkdir lib spec
+cp ../person.rb lib
+cd spec
+touch person_spec.rb
+cd ..
+rspec spec 
+rspec spec spec/person_spec.rb 
+```
+
+```ruby
+require 'rspec'
+require './lib/person'
+
+describe Person do
+    describe '#initialize' do 
+        it 'is an instance of person' do 
+            person = Person.new("Paul", "Offei", 44, "male")
+            expect(person).to be_a Person 
+        end 
+
+        it 'has a first name' do 
+            person = Person.new("Paul", "Offei", 44, "male")
+            expect(person.first_name).to  eq 'Paul'
+        end 
+
+        it 'has a last name' do 
+            person = Person.new("Paul", "Offei", 44, "male")
+            expect(person.last_name).to  eq 'Offei'
+        end 
+
+        it 'has age' do 
+            person = Person.new("Paul", "Offei", 44, "male")
+            expect(person.age).to  eq 44
+        end 
+
+        it 'has a gender' do 
+            person = Person.new("Paul", "Offei", 44, "male")
+            expect(person.gender).to  eq 'male'
+        end 
+
+        it 'has status by default' do 
+            person = Person.new("Paul", "Offei", 44, "male")
+            expect(person.status).to  eq 'single'
+        end 
+
+        it 'can have different name as well' do 
+            person = Person.new("Esi", "Osei", 24, "female", "married")
+            expect(person.first_name).to  eq 'Esi'
+            expect(person.last_name).to  eq 'Osei'
+            expect(person.age).to  eq  24
+            expect(person.gender).to  eq 'female'
+            expect(person.status).to  eq 'married'
+        end 
+    end
+
+    describe '#have birthday' do 
+        it 'add plus one to the person age' do  
+            person = Person.new("Paul", "Offei", 44, "male")
+            person.have_birthday
+
+            expect(person.age).to eq 45
+        end
+    end
+          
+end
+
+```
+
+### Practice
+* Apply the same techniques on `book.rb employee.rb library.rb location.rb class`
+
+
+
+## 3. Flow Control
+
+### Conditional Statement in Ruby
+Is a Boolean statement, which is a Declarative statement that is either true or false but not both 
+* true
+* false
+
+```bash
+[1] pry(main)> statement1 = true
+=> true
+[2] pry(main)> statement2 = false
+=> false
+[3] pry(main)> statement3 = true
+=> true
+[4] pry(main)> statement4 = false
+=> false
+```
+
+### Comparason Operator in Ruby
+Their result always return true or false
+* == (Equal to:) 
+* >= (greater than or equal to:)
+* <= (less than or equal to)
+* > (greater than)
+* < (less than)
+* != (not equal to)
+
+```bash
+[5] pry(main)> 2 == 2
+=> true
+[6] pry(main)> 3 != 5
+=> true
+[7] pry(main)> 7 > 5
+=> true
+[8] pry(main)> 99 < 34
+=> false
+[9] pry(main)> 44 >=  55
+=> false
+[10] pry(main)> 44 <= 66
+=> true
+```
+
+### Relation Operators in Ruby
+* && (and) - only true when all of its statement are true 
+* || (or) - only false when all of its statement are false
+* ! (not) - inverse of itself
+
+```bash
+[13] pry(main)> statement1 && statement2
+=> false
+[14] pry(main)> statement1 && statement3
+=> true
+[15] pry(main)> statement1 || statement1
+=> true
+[16] pry(main)> statement2 || statement4
+=> false
+[17] pry(main)> !statement1
+=> false
+[18] pry(main)> !statement2
+=> true
+```
+
+### Branching or Decision Making or Selection
+* if 
+* if - else
+* if - elsif .... - else
+
+```bash
+[19] pry(main)> if statement1 
+[19] pry(main)*   puts "I Love System Analysis and Design"
+[19] pry(main)* end  
+I Love System Analysis and Design
+=> nil
+[20] pry(main)> if statement2
+[20] pry(main)*   puts "I Love NSBT"
+[20] pry(main)* else  
+[20] pry(main)*   puts "Yeah NSBT is the best"
+[20] pry(main)* end  
+Yeah NSBT is the best
+=> nil
+[21] pry(main)> if statement2
+[21] pry(main)*   puts "yes!"  
+[21] pry(main)* elsif statement4  
+[21] pry(main)*   puts "yes yes!!"  
+[21] pry(main)* elsif statement1 && statement2   
+[21] pry(main)*   puts "yes yes yes!!!!"  
+[21] pry(main)* elsif statement3 || statement4 && statement1    
+[21] pry(main)*   puts "yeah yeah!!!!!"
+[21] pry(main)* else  
+[21] pry(main)*   puts "Hey hey!!"
+[21] pry(main)* end  
+yeah yeah!!!!!
+=> nil
+```
+
+### Repeatition in Ruby with
+* Times
+```bash
+[22] pry(main)> 5.times do
+[22] pry(main)*   puts "I Love you"
+[22] pry(main)* end  
+I Love you
+I Love you
+I Love you
+I Love you
+I Love you
+=> 5
+[23] pry(main)> 3.times do |any_name|
+[23] pry(main)*   puts any_name
+[23] pry(main)* end  
+0
+1
+2
+=> 3
+```
+
+* while
+```bash
+[24] pry(main)> initialization = 0
+=> 0
+[25] pry(main)> while initialization < 5
+[25] pry(main)*   puts "I Like You"
+[25] pry(main)*   initialization += 1
+[25] pry(main)* end  
+I Like You
+I Like You
+I Like You
+I Like You
+I Like You
+=> nil
+```
+* until (is the onverse of while)
+```bash
+[31] pry(main)> age = 5
+=> 5
+[32] pry(main)> until age > 10
+[32] pry(main)*   puts "I'm still a baby"  
+[32] pry(main)*   age = age + 1
+[32] pry(main)* end  
+I'm still a baby
+I'm still a baby
+I'm still a baby
+I'm still a baby
+I'm still a baby
+I'm still a baby
+=> nil
+```
+* loop
+```bash
+[35] pry(main)> age = 10
+=> 10
+[36] pry(main)> loop do
+[36] pry(main)*   if age != 18
+[36] pry(main)*     puts "you are not eligible to vote"
+[36] pry(main)*   end  
+[36] pry(main)*   if age % 2 == 0
+[36] pry(main)*     age += 2
+[36] pry(main)*   end  
+[36] pry(main)*   if age == 18
+[36] pry(main)*     puts "woow I can vote"
+[36] pry(main)*     break
+[36] pry(main)*   end  
+[36] pry(main)* end  
+you are not eligible to vote
+you are not eligible to vote
+you are not eligible to vote
+you are not eligible to vote
+woow I can vote
+=> nil
+```
+
+## 4. Scope
+Scope is what you have access to and where you have access to it.
+Think of scope as a gateman and a house owner. House owner has her own room and the gateman to has his own room closer to the gate. both room are caled scope but the house owner can have access to the gateman room but the gateman don't have access to her room. 
+
+* Local Variable: name fish_and_chips x_axis thx1138 _x _26
+* Instance Variable: @name @point_1 @X @_ @plan9
+* Class Variable: @@total @@symtab @@N @@x_pos @@SINGLE
+* Global Variable: $debug $CUSTOMER $_ $plan9 $Global
+* Class Name: String ActiveRecord MyClass
+* Constant Name: FEET_PER_MILE DEBUG
+
+### Global Scope
+#### Example 1
+
+```ruby
+x = 10
+puts x
+puts y
+```
+
+#### Example 2
+
+```ruby
+x = 10
+puts x
+puts y
+y = 20
+```
+
+#### Example 3
+
+```ruby
+x = 10
+def say_hello
+  puts "Hello World!"
+end
+puts x
+```
+
+#### Example 4
+
+```ruby
+def print_variable
+  x = 4
+  puts x
+end
+
+x = 2
+print_variable
+```
+
+#### Example 5
+
+```ruby
+def print_variable
+  x = 4
+end
+
+x = 2
+print_variable
+puts x
+```
+
+### Method Scope
+#### Example 6
+
+```ruby
+def print_variable
+  x = 10
+  puts x
+end
+print_variable
+puts x
+```
+
+#### Example 7
+
+```ruby
+def print_variable
+  x = 4
+  puts x
+end
+
+print_variable
+```
+
+#### Example 8
+
+```ruby
+def print_variable
+x = 4
+puts x
+end
+
+x = 2
+print_variable
+```
+
+#### Example 9
+
+```ruby
+def print_variable
+x = 4
+end
+
+x = 2
+print_variable
+puts x
+```
+
+#### Example 10
+
+```ruby
+def print_variable(x)
+puts x
+end
+
+print_variable(4)
+```
+
+#### Example 11
+
+```ruby
+def print_variable(x)
+  puts x
+end
+
+x = 4
+print_variable(x)
+```
+
+#### Example 12
+
+```ruby
+def print_variable(x)
+  puts x
+end
+
+print_variable(2)
+puts x
+```
+
+#### Example 13
+
+```ruby
+def print_variable(x)
+x = 4
+puts x
+end
+
+print_variable(2)
+puts x
+```
+
+### Block Scope
+#### Example 14
+
+```ruby
+numbers = [1,2,3]
+total = 0
+numbers.each do |number|
+  total += number
+end
+
+p total
+```
+
+#### Example 15
+
+```ruby
+numbers = [1,2,3]
+total = 0
+numbers.each do |number|
+  pizza = "yummy!"
+  total += number
+end
+
+p pizza
+```
+
+#### Example 15
+
+```ruby
+numbers = [1,2,3]
+total = 0
+numbers.each do |number|
+  total += number
+end
+
+p number
+```
+
+#### Example 17
+
+```ruby
+numbers = [1,2,3]
+number = 0
+numbers.each do |number|
+  puts number
+end
+```
+
+#### Example 18
+
+```ruby
+numbers = [1,2,3]
+numbers.each do |number|
+  number = 0
+  puts number
+end
+```
+
+#### Example 19
+
+```ruby
+numbers = [1,2,3]
+def number
+  0
+end
+numbers.each do |number|
+  puts number
+end
+```
+### Class Scope
+* refer to examples in (1)

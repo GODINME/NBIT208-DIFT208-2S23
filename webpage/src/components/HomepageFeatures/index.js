@@ -4,32 +4,46 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Week One',
+    Svg: require('@site/static/img/wk1.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        <ul>
+          <li>Case Study: Scale From Zero To Millions of Users</li>
+          <li>
+            <a href='https://ugedugh-my.sharepoint.com/:b:/g/personal/poffei_st_ug_edu_gh/EYRHbNl-BUhBlWl9nqOK-SsBtNhdWVgxxs6Hyxuo7mqWVw?e=Hrg4sh' target='_blank' >SA1 Slide: Fundamentals in Requirements Engineering</a>
+          </li>
+          <li>Homework 1 Released</li>
+        </ul>
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Week Two',
+    Svg: require('@site/static/img/wk2.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        <ul>
+          <li>Case Study:  Back Of The Envelop Estimation</li>
+          <li>
+            <a href='https://ugedugh-my.sharepoint.com/:p:/g/personal/poffei_st_ug_edu_gh/EUrOvngCvQ1BrXaQydf7crsBr3OdRcH6eo1RUGxvgpQ4eg?e=U2YiTA' target='_blank'>SD1 Slide: Types of Scaling</a>
+          </li>
+          <li>
+            <a href='https://ugedugh-my.sharepoint.com/:p:/g/personal/poffei_st_ug_edu_gh/EUl2znN_5sxHneazGaLM9zIBhM8sP0aegx8lwvUQNVPnXg?e=r6pPQM' target='_blank'>SD2 Slide: HTTP and Web Services</a>
+          </li>
+          <li>
+            <a href='https://ugedugh-my.sharepoint.com/:b:/g/personal/poffei_st_ug_edu_gh/Eclh9aj24AtAj-Lg-PEZpKQB_LLgY4XLsuWv7BHJYcLM0w?e=x8txe2' target='_blank'>SA2 Slide: Requirements Engineering Core Activities and Principles</a>
+          </li>
+        </ul>
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Week Three',
+    Svg: require('@site/static/img/wk3.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Homework 1 due for submission
       </>
     ),
   },
