@@ -2,7 +2,6 @@
 slug: labOne
 title: Lab One - Onboarding with Ruby
 authors: [ntow, poffei]
-tags: [facebook, hello, docusaurus]
 ---
 
 ## Lab Goals and Culture
