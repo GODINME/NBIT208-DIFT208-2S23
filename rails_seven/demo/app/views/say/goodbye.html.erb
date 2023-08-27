@@ -1,3 +1,10 @@
 <h1>Ending class session</h1>
 <p>Goodbye to all of you!!!</p>
+<p><%= "love" + "Grace" %></p>
+<p>
+    <% @files.each do |file| %>
+        file name is: <%= file %>
+        <%= puts " " %>
+    <% end %>
+</p>
 <p>Say <%= link_to "Hello", say_hello_path %> again </p>
