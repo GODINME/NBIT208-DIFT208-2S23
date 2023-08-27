@@ -3,8 +3,7 @@
 <p><%= "love" + "Grace" %></p>
 <p>
     <% @files.each do |file| %>
-        file name is: <%= file %>
-        <%= puts " " %>
+        <ul><li>file name is: <%= file %><li></ul>
     <% end %>
 </p>
 <p>Say <%= link_to "Hello", say_hello_path %> again </p>
