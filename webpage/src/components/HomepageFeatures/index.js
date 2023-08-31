@@ -43,7 +43,18 @@ const FeatureList = [
     Svg: require('@site/static/img/wk3.svg').default,
     description: (
       <>
-        Homework 1 due for submission
+        <ul>
+          <li>Case Study:  A FRAMEWORK FOR SYSTEM DESIGN INTERVIEWS</li>
+          <li>
+            <a href='https://ugedugh-my.sharepoint.com/:p:/g/personal/poffei_st_ug_edu_gh/ER1zgQYIIcJDjk2pGQ_EWCwBEzBWp39W1Oypd3OAJTrcxw?e=hJVjU6' target='_blank'>SD3 Slide: Stateless Services</a>
+          </li>
+          <li>
+            <a href='https://ugedugh-my.sharepoint.com/:p:/g/personal/poffei_st_ug_edu_gh/EYCSNSG2YOFCgVPTUWBWySMBtLWSBrAGRyQu-f0VXDNvTg?e=f7D6zB' target='_blank'>SD4 Slide: Proxies and Caches</a>
+          </li>
+          <li>
+            <a href='https://ugedugh-my.sharepoint.com/:b:/g/personal/poffei_st_ug_edu_gh/EblY2d9lDyZMizAWZbSJWN4Bg9dbHgCh5QDOfKqa0iJNug?e=ONQAG6' target='_blank'>SA3 Slide: Requirements Engineering Approaches Overview</a>
+          </li>
+        </ul>
       </>
     ),
   },
