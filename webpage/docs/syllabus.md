@@ -73,5 +73,6 @@ The course evaluation will be a weighted mask score on class attenance and parti
 * [Modern Systems Analysis and Design by Joseph Valacich, Joey George](https://ugedugh-my.sharepoint.com/:b:/g/personal/poffei_st_ug_edu_gh/Eehpvfl6SUtPiEWWJcj5Ma0BA59qmvEyYGvgXA2GfjD_iQ?e=wlD5OU)
 * [System Design by Alex Xu](https://ugedugh-my.sharepoint.com/:b:/g/personal/poffei_st_ug_edu_gh/ETS4c2NQ_bBAo0dLhx7GVlEB2bLwZ46oxDAJ_fAbQC5CxQ?e=X5dVw1)
 * [Engineering Software as a Service by Armando Fox, David Patterson](https://ugedugh-my.sharepoint.com/:b:/g/personal/poffei_st_ug_edu_gh/EW83sbNFNAhKoP5zvwFpHPIBblKweLVOMSMguf6RPJ86JA?e=GTuO55)
+*[Engineering Software Products by Ian Sommerville](https://ugedugh-my.sharepoint.com/:b:/g/personal/poffei_st_ug_edu_gh/EedaifBZXXBDp3aeXZNzL80BVxZYzQeM39AY1i2HfWEmNg?e=qrwD5u)
 
 
